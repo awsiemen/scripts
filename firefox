@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Wrapper script to start Firefox with a given profile in order to mimic
+# Chrome's multiple users.
+
+if [[ $1 == 'work' ]]
+then
+firefox -profile /home/andrew/.mozilla/firefox/d35lv28c.Work -no-remote &
+else
+firefox -profile /home/andrew/.mozilla/firefox/jhl7ortc.default -no-remote &
+fi
+
+exit 0
